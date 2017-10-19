@@ -11,43 +11,7 @@ namespace WebApplication2.Controllers
     {
         private static List<Person> Products = new List<Person>();
 
-        //public PersonController()
-        //{
-        //    if (Person.Count() == 0)
-        //    {
-        //        Person p = new Person
-        //        {
-        //            FirstName = "Anuj",
-        //            LastName = "Patel",
-        //            BirthDate= "1/1/1996",
-        //            Age = 21
-        //        };
-
-        //        Person.Add(p);
-        //    }
-        //}
-        //public IActionResult ShowProduct(int? id)
-        //{
-        //    Person p;
-        //    if (id == null)
-        //    {
-        //        p = new Product
-        //        {
-        //            FirstName = "Anuj",
-        //            LastName = "Patel",
-        //            BirthDate = "1/1/1996",
-        //            Age = 21
-        //        };
-        //    }
-        //    else
-        //    {
-        //        p = Products.Find(prod => prod.ProductID == id);
-        //    }
-        //    id = null;
-        //    return View(p);
-        //}
-
-        public IActionResult PersonList()
+        public IActionResult Index()
         {
             return View(Person);
         }
@@ -70,6 +34,12 @@ namespace WebApplication2.Controllers
                 return View();
             }
         }
+
+        public IActionResult ViewPerson(Person p)
+        {
+            return View(p);
+        }
+
 
     }
 }
