@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebApplication2.Models.Person>
+
+@{
+    ViewData["Title"] = "Person Details";
+}
+
+<h2>Person Details</h2>
+
+<p>
+    <a asp-action="EnterPerson">Add a Person</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(item => item.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountDue)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(something => item.FirstName)
+                </td>
+                <td>
+                    @item.LastName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                </td>
+                <td>
+                    @item.Age
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountDue)
+                </td>*@
+                <td>
+
+                    @Html.ActionLink("Details", "ShowProduct", new { id = item.FirstName })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

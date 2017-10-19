@@ -10,7 +10,7 @@ namespace WebApplication2.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["Name"] = "Web Application 1 - Lab 4";
+            ViewData["Name"] = "Web Application 2 - Lab 5";
             DateTime today = DateTime.Now;
             //DateTime today = new DateTime(2017, 10, 12, 8, 30, 0);
             // DateTime.Now;

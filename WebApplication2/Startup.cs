@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace WebApplication1
+namespace WebApplication2
 {
     public class Startup
     {
