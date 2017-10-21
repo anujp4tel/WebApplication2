@@ -13,17 +13,23 @@ namespace WebApplication2.Models
         [Required(ErrorMessage = "Input value between 2-20 characters long")]
         public string LastName { get; set; }
         [DataType(DataType.Date)]
-        public DataType BirthDate { get; set; }
-        public int Age { get; set; }
-        //public int Age {
-        //    get
-        //    {
-        //        DateTime now = DateTime.Today;
-        //        int Age = now.Year - BirthDate.Year;
-        //        if (now < BirthDate.Year(Age)) Age--;
-        //        return Age;
-        //    }
-        //}
+        public DateTime BirthDate { get; set; }
+        //public int Age { get; set; }
+
+        internal static void Add(Person p)
+        {
+            throw new NotImplementedException();
+        }
+        public int Age
+        {
+            get
+            {
+                DateTime now = DateTime.Today;
+                int Age = now.Year - BirthDate.Year;
+                if (now < BirthDate.AddYears(Age)) Age--;
+                return Age;
+            }
+        }
 
     }
 }

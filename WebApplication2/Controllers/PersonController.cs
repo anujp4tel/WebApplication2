@@ -13,7 +13,7 @@ namespace WebApplication2.Controllers
 
         public IActionResult Index()
         {
-            return View(Person);
+            return View();
         }
 
         public IActionResult EnterPerson()
@@ -26,7 +26,7 @@ namespace WebApplication2.Controllers
         {
             if (ModelState.IsValid)
             {
-                Person.Add(p);
+                Person.Add((p));
                 return View("ShowPerson", p);
             }
             else
@@ -35,7 +35,7 @@ namespace WebApplication2.Controllers
             }
         }
 
-        public IActionResult ViewPerson(Person p)
+        public IActionResult ShowPerson(Person p)
         {
             return View(p);
         }
