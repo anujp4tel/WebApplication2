@@ -3,12 +3,12 @@
     ViewData["Title"] = "ShowPerson";
 }
 
-<h2>Sample Product</h2>
+@*<h2>Sample Product</h2>*@
 
-<div>Person FirstName: @Model.FirstName</div>
-<div>Person LastName: @Model.LastName</div>
-<div>BirthDate BirthDate: @Model.BirthDate</div>
-<div>Age due: @Model.Age.ToString("")</div>
+<div>First Name: @Model.FirstName</div>
+<div>Last Name: @Model.LastName</div>
+<div>Birth Date: @Model.BirthDate</div>
+<div>Age: @Model.Age.ToString("")</div>
 <div>
     <br><br> <a asp-action="Index">Back to List</a>
 </div>

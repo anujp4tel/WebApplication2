@@ -5,41 +5,40 @@
 }
 
 <h2>Add Person</h2>
-
 <hr />
 <div class="row">
    <div class="col-md-4">
         <form asp-action="EnterPerson">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label">First Name</label>
+                <label asp-for="FirstName" class="control-label">First Name</label><br />
                 <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LastName" class="control-label">Last Name</label>
+                <label asp-for="LastName" class="control-label">Last Name</label><br />
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="BirthDate" class="control-label">Birth Date</label>
+                <label asp-for="BirthDate" class="control-label">Birth Date</label><br />
                 <input asp-for="BirthDate" class="form-control" />
                 <span asp-validation-for="BirthDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Age" class="control-label"> Age </label>
+            @*<div class="form-group">
+                <label asp-for="Age" class="control-label"> Age </label><br />
                 <input asp-for="Age" class="form-control" />
                 <span asp-validation-for="Age" class="text-danger"></span>
-            </div>
+            </div>*@
 
 
             <div class="form-group">
-                <input type="submit" value="submit" class="btn btn-default" />
+                <input type="submit" value="submit" class="btn btn-info" id="rounded-button" /> 
+
+                <a asp-action="Index" id="border">Cancle</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+

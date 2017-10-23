@@ -9,11 +9,11 @@ namespace WebApplication2.Controllers
 {
     public class PersonController : Controller
     {
-        private static List<Person> Products = new List<Person>();
+        private static List<Person> Person = new List<Person>();
 
         public IActionResult Index()
         {
-            return View();
+            return View(Person);
         }
 
         public IActionResult EnterPerson()
